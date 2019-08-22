@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="Destination" value="Amsterdam"/>
+  <parameter name="Source" value="Manchester"/>
+  <test name="Test">
+    <parameter name="Destination" value="Amsterdam"/>
+    <parameter name="Source" value="Manchester"/>
+    <classes>
+      <class name="org.cts.test.DataDriven.TC1"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Failed suite [Suite] -->
