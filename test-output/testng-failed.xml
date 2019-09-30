@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="Destination" value="Amsterdam"/>
-  <parameter name="Source" value="Manchester"/>
+  <listeners>
+    <listener class-name="org.cts.test.DataDriven.IAnnotation_C"/>
+  </listeners>
   <test name="Test">
-    <parameter name="Destination" value="Amsterdam"/>
-    <parameter name="Source" value="Manchester"/>
     <classes>
-      <class name="org.cts.test.DataDriven.TC1"/>
+      <class name="org.cts.test.DataDriven.ParallelClassA"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="org.cts.test.DataDriven.ParallelClassA">
+        <methods>
+          <include name="tc3"/>
+        </methods>
+      </class> <!-- org.cts.test.DataDriven.ParallelClassA -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
